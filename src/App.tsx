@@ -11,7 +11,7 @@ function App() {
       const source = arr[2];
       const id = arr[3];
 
-      const url = `com.inqool.mojeolomouc://${screen}/${source}/${id}`;
+      const url = `://${screen}/${source}/${id}`;
       hrefUrl = url;
     }
   }
@@ -19,7 +19,7 @@ function App() {
   return (
     <main>
       <a
-        href={hrefUrl}
+        href={`com.inqool.mojeolomouc${hrefUrl}`}
         style={{
           border: "1px solid #ee2e24",
           padding: "5px",
@@ -29,6 +29,18 @@ function App() {
         }}
       >
         Zobrazit detail aktuality v aplikaci{" "}
+      </a>
+      <a
+        href={`moje-olomouc${hrefUrl}`}
+        style={{
+          border: "1px solid #ee2e24",
+          padding: "5px",
+          borderRadius: "10px",
+          textDecoration: "none",
+          color: "#ee2e24",
+        }}
+      >
+        moje-olomouc
       </a>
     </main>
   );
