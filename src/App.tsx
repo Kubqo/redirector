@@ -40,7 +40,7 @@ function App() {
         Zobrazit detail aktuality v aplikaci (Android)
       </a>
       <a
-        href={`com.inqool.mojeolomouc${hrefUrl}`}
+        href={`cityapp.com.statutarnimestoolomouc${hrefUrl}`}
         style={{
           border: "1px solid #ee2e24",
           padding: "5px",
@@ -53,7 +53,7 @@ function App() {
         Zobrazit detail aktuality v aplikaci (IOS)
       </a>
       <a
-        href={`cityapp.com.statutarnimestoolomouc${hrefUrl}`}
+        href={`moje-olomouc${hrefUrl}`}
         style={{
           border: "1px solid #ee2e24",
           padding: "5px",
