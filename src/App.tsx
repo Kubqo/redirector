@@ -13,6 +13,7 @@ function App() {
 
       const url = `://${screen}/${source}/${id}`;
       hrefUrl = url;
+      window.location.replace(url);
     }
   }
 
