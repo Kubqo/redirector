@@ -13,7 +13,7 @@ function App() {
 
       const url = `://${screen}/${source}/${id}`;
       hrefUrl = url;
-      window.location.replace(url);
+      window.location.replace("moje-olomouc" + url);
     }
   }
 
