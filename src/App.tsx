@@ -17,7 +17,15 @@ function App() {
   }
 
   return (
-    <main>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        border: "1px solid black",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <a
         href={`com.inqool.mojeolomouc${hrefUrl}`}
         style={{
@@ -26,23 +34,38 @@ function App() {
           borderRadius: "10px",
           textDecoration: "none",
           color: "#ee2e24",
+          margin: 10,
         }}
       >
-        Zobrazit detail aktuality v aplikaci{" "}
+        Zobrazit detail aktuality v aplikaci (Android)
       </a>
       <a
-        href={`moje-olomouc${hrefUrl}`}
+        href={`com.inqool.mojeolomouc${hrefUrl}`}
         style={{
           border: "1px solid #ee2e24",
           padding: "5px",
           borderRadius: "10px",
           textDecoration: "none",
           color: "#ee2e24",
+          margin: 10,
         }}
       >
-        moje-olomouc
+        Zobrazit detail aktuality v aplikaci (IOS)
       </a>
-    </main>
+      <a
+        href={`cityapp.com.statutarnimestoolomouc${hrefUrl}`}
+        style={{
+          border: "1px solid #ee2e24",
+          padding: "5px",
+          borderRadius: "10px",
+          textDecoration: "none",
+          color: "#ee2e24",
+          margin: 10,
+        }}
+      >
+        Zobrazit detail aktuality v aplikaci (Nezalezi na platforme)
+      </a>
+    </div>
   );
 }
 
