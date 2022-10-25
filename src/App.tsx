@@ -2,7 +2,9 @@ import "./App.css";
 
 function App() {
   const pathname = window.location.pathname;
-  let hrefUrl;
+  let hrefUrlAndroid;
+  let hrefUrlIos;
+  let hrefUrlUniversal;
 
   if (pathname !== "/") {
     const arr = pathname.split("/");
@@ -11,9 +13,9 @@ function App() {
       const source = arr[2];
       const id = arr[3];
 
-      const url = `://${screen}/${source}/${id}`;
-      hrefUrl = url;
-      window.location.replace("moje-olomouc" + url);
+      hrefUrlAndroid = `com.inqool.mojeolomouc://${screen}/${source}/${id}`;
+      hrefUrlIos = `cityapp.com.statutarnimestoolomouc://${screen}/${source}/${id}`;
+      hrefUrlUniversal = `moje-olomouc://${screen}/${source}/${id}`;
     }
   }
 
@@ -28,7 +30,7 @@ function App() {
       }}
     >
       <a
-        href={`com.inqool.mojeolomouc${hrefUrl}`}
+        href={hrefUrlAndroid}
         style={{
           border: "1px solid #ee2e24",
           padding: "5px",
@@ -41,7 +43,7 @@ function App() {
         Zobrazit detail aktuality v aplikaci (Android)
       </a>
       <a
-        href={`cityapp.com.statutarnimestoolomouc${hrefUrl}`}
+        href={hrefUrlIos}
         style={{
           border: "1px solid #ee2e24",
           padding: "5px",
@@ -54,7 +56,7 @@ function App() {
         Zobrazit detail aktuality v aplikaci (IOS)
       </a>
       <a
-        href={`moje-olomouc${hrefUrl}`}
+        href={hrefUrlUniversal}
         style={{
           border: "1px solid #ee2e24",
           padding: "5px",
